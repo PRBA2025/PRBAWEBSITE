@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mission | Philippine Rollball Association</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Mission Section -->
+  <section class="mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>
+        We strive to promote and grow the sport of Rollball in the Philippines through inclusive programs,
+        development initiatives, and partnerships that inspire excellence and sportsmanship.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+  const sections = [
+    "header", 
+    "footer"
+  ];
+
+  sections.forEach(section => {
+    fetch(`${section}.html`)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById(`${section}-container`).innerHTML = html;
+
+        // Re-initialize scripts that depend on loaded content
+        if (section === "home") {
+          initHomeCarousel();
+        }
+        if (section === "header") {
+          initNavbarScroll();
+        }
+      });
+  });
+</script>
+
+  <script src="../javascript/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
