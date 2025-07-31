@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <title>Philippine Rollball Association</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/prbalogo.png">
+
+  <!-- External Libraries -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="icon" type="image/png" href="images/prbalogo.png">
 </head>
 <body>
 
+  <!-- Section containers -->
   <div id="header-container"></div>
   <div id="home-container"></div>
   <div id="rollball-container"></div>
@@ -20,36 +23,67 @@
   <div id="contact-container"></div>
   <div id="footer-container"></div>
 
+  <!-- Load Swiper JS and app logic -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="javascript/script.js"></script>
+
   <script>
-  const sections = [
-    "header", "home", "rollball", "about",
-    "news", "gallery", "officer", "contact", "footer"
-  ];
+    const sections = [
+      "header", "home", "rollball", "about",
+      "news", "gallery", "officer", "contact", "footer"
+    ];
 
-  sections.forEach(section => {
-    fetch(`sections/${section}.html`)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById(`${section}-container`).innerHTML = html;
-
-        // Re-initialize scripts that depend on loaded content
-        if (section === "home") {
-          initHomeCarousel();
-        }
-        if (section === "header") {
-          initNavbarScroll();
+    const initSwiper = () => {
+      const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
         }
       });
-  });
-</script>
+    };
 
+    const loadSections = async () => {
+      for (const section of sections) {
+        try {
+          const res = await fetch(`sections/${section}.html`);
+          const html = await res.text();
+          document.getElementById(`${section}-container`).innerHTML = html;
 
-<script src="javascript/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="js/gallery.js"></script> <!-- Adjust path as needed -->
+          // Call any section-specific initializers
+          if (section === "home" && typeof initHomeCarousel === "function") {
+            initHomeCarousel();
+          }
+          if (section === "header" && typeof initNavbarScroll === "function") {
+            initNavbarScroll();
+          }
+          if (section === "gallery") {
+            // Swiper is ready only after this section is injected
+            initSwiper();
+          }
 
-  <script src="javascript/swiper.js"></script>
+        } catch (err) {
+          console.error(`Failed to load ${section}.html`, err);
+        }
+      }
+    };
 
-
+    loadSections();
+  </script>
 </body>
 </html>
