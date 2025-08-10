@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mission & Vision - Philippine Rollball Association</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/prbalogo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+ <section class="mission-vision">
+    <h1>Philippine Roll Ball History</h1>
+    <div class="timeline">
+      <div class="event">
+        <img src="IMAGE_URL_1" alt="Roll Ball practice">
+        <div>
+          <h4>March 18, 2023 (Saturday) – Official Launch</h4>
+          <p>The Muntinlupa Roll Ball Association was officially launched at Decathlon, Alabang.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_2" alt="World Cup preparation">
+        <div>
+          <h4>April 3, 2023 – World Cup Prep</h4>
+          <p>Preparations began for the Roll Ball World Cup to be held in Pune, India from April 21–26, 2023.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_3" alt="AHA! TV feature">
+        <div>
+          <h4>April 24, 2023 – TV Feature</h4>
+          <p>The Philippine Roll Ball Association was featured with Prof. Bonifacio Escoda during the taping of AHA!.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_4" alt="Seminar or webinar">
+        <div>
+          <h4>September 29, 2023 – Webinar Launch</h4>
+          <p><em>Introducing Roll Ball</em>, a free webinar to introduce the sport.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_4" alt="Seminar or webinar">
+        <div>
+          <h4>October 6, 2023 (2:00 PM – 4:00 PM) – Soft Launch</h4>
+          <p>Soft launch of Roll Ball in the Philippines at Decathlon, Muntinlupa City.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_5" alt="Virtual seminar series">
+        <div>
+          <h4>October 14, 15, 20, 21, 2023 – Virtual Seminar Series</h4>
+          <p>Virtual seminar series conducted to further promote Roll Ball.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_6" alt="Practice sessions">
+        <div>
+          <h4>June 17, 20, 22, 2024 – Practice Sessions</h4>
+          <p>Roll Ball practice sessions held at the Mother of Perpetual Help School Fairview Covered Gymnasium in Quezon City.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_7" alt="Exhibition game">
+        <div>
+          <h4>June 23, 2024 – First Exhibition Game</h4>
+          <p>The first Roll Ball exhibition game took place in the Philippines.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_8" alt="POC application">
+        <div>
+          <h4>August 29, 2024 – POC Application</h4>
+          <p>PRBA applied for membership in the Philippine Olympic Committee (POC) as a National Sports Association.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_9" alt="DZME interview">
+        <div>
+          <h4>September 29, 2024 – DZME Interview</h4>
+          <p>Interview on DZME featuring the PRBA for wider media exposure.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_10" alt="Token presentation">
+        <div>
+          <h4>September 30, 2024 – Token Presentation</h4>
+          <p>PRBA President and Executive Director Ptr. Tony Ortega presented a token of appreciation to Mr. Amitabh Sharma, Chairman of GTCC and member of the India Olympic Association Executive Committee, at Lanson Place, Mall of Asia.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_11" alt="Activities related to Mr. Raju Dabhade">
+        <div>
+          <h4>October 2, 2024 – Activities Related to Mr. Raju Dabhade</h4>
+          <p>Activities related to Mr. Raju Dabhade took place (please clarify the context for this entry).</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_12" alt="Player tryouts">
+        <div>
+          <h4>October 12, 19, 26, 2024 – Player Tryouts</h4>
+          <p>Calls for player tryouts in Roll Ball.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_13" alt="MOA signing">
+        <div>
+          <h4>October 13, 2024 – MOA Signing</h4>
+          <p>Signing of a Memorandum of Agreement establishing Roller Disco as the official home court for PRBA’s tryouts, training sessions, and future events.</p>
+        </div>
+      </div>
+      <div class="event">
+        <img src="IMAGE_URL_14" alt="4th Asian Roll Ball Championship">
+        <div>
+          <h4>December 16–19, 2024 – 4th Asian Roll Ball Championship</h4>
+          <p>The 4th Asian Roll Ball Championship was held in the Philippines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script>
+    // Load header and footer dynamically like your main page
+    const parts = ["header", "footer"];
+    parts.forEach(part => {
+      fetch(`../sections/${part}.html`)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(`${part}-container`).innerHTML = html;
+
+          if (part === "header") {
+            if (typeof initNavbarScroll === "function") {
+              initNavbarScroll();
+            }
+          }
+        });
+    });
+  </script>
+
+  <script src="../javascript/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="../javascript/swiper.js"></script>
+</body>
+</html>
