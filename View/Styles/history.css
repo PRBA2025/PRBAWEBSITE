@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    font-weight: 900;
+}
+    .timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #000;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+  position: relative;
+}
+
+/* Circle marker */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 55px;   /* bigger circle */
+  height: 58px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 50%;
+  width: 60px;   /* same as circle */
+  height: 60px;
+  background: url("../icons/ball_removed.svg") no-repeat center;
+  background-size: cover; /* fill the whole box */
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+
+
+/* nth-child color cycling */
+.timeline-item:nth-child(3n+1)::before { background: #0038A8; }
+.timeline-item:nth-child(3n+2)::before { background: #CE1126; }
+.timeline-item:nth-child(3n)::before   { background: #FCD116; }
+
+.timeline-content, .timeline-image {
+  width: 40%;
+  opacity: 0;  /* hidden initially */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-content {
+  padding: 1rem;
+  width: 36%;
+  height : auto;
+  background: white;
+  border: 2px solid #0077b6;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.timeline-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* --- Animation States --- */
+/* Left item: content from left, image from right */
+.timeline-item.left .timeline-content { transform: translateX(-100px); }
+.timeline-item.left .timeline-image { transform: translateX(100px); }
+
+/* Right item: image from left, content from right */
+.timeline-item.right .timeline-image { transform: translateX(-100px); }
+.timeline-item.right .timeline-content { transform: translateX(100px); }
+
+/* When visible */
+.timeline-item.show .timeline-content,
+.timeline-item.show .timeline-image {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+h3  {
+    text-align: justify;
+}
