@@ -11,8 +11,6 @@
     background: #F8F8F8;
     flex-wrap: wrap;
     height: 70vh;
-    border-bottom: 5px solid var(--text-color);
-    /* makes it responsive */
 }
 
 .about .about-content {
