@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'horizon', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #0038A8;
+    --secondary-color: #CE1126;
+    --thirdary-color: #FCD116;
+    --background-color: #ffffff;
+    --text-color: #1b1b1b;
+    --border-radius: 8px;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}

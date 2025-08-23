@@ -1,0 +1,95 @@
+@import url("root.css");
+
+/* About Section */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 10%;
+    gap: 6rem;
+    background: #F8F8F8;
+    flex-wrap: wrap;
+    height: 70vh;
+    border-bottom: 5px solid var(--text-color);
+    /* makes it responsive */
+}
+
+.about .about-content {
+    max-width: 600px;
+    flex: 1 1 400px;
+}
+
+.about .about-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.about .about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about .about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-content h2 {
+    font-size: 10rem;
+    text-align: left;
+    padding-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.about-content p {
+    font-size: 2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-content .btn {
+    margin-top: 2.5rem;
+}
+
+.about-content button {
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border-radius: var(--border-radius);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-content button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+    }
+    .about-content h2 {
+        text-align: center;
+    }
+    .about-content button {
+        margin: 0 auto;
+        display: block;
+    }
+}

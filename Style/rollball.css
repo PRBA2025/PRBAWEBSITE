@@ -1,0 +1,40 @@
+@import url("root.css");
+.rollball {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 8%;
+    height: 60vh;
+    background-color: white;
+}
+
+.rollball-content h2 {
+    font-size: 8rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.rollball-content p {
+    font-size: 3rem;
+}
+
+.rollball-image img {
+    width: 30vw;
+    border-radius: 30px;
+    margin-left: 5rem;
+}
+
+.rollball-btn {
+    background: var(--primary-color);
+    padding: 1rem 3rem;
+    color: var(--background-color);
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    font-size: 3rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.rollball-btn:hover {
+    transform: scale(1.1);
+    background: var(--secondary-color);
+}
