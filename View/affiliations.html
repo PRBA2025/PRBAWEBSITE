@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/affiliations.css">
+    <title>Affiliated Schools & Clubs</title>
+</head>
+<body>
+   <h1>AFFILIATED SCHOOLS AND CLUBS</h1>
+
+   <div class="container"> 
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search...">
+      <button onclick="searchCards()">Search</button>
+    </div>
+<div class="card-wrapper">
+    <div class="card-container">
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/prbalogo.png" alt="Card 1 Image">
+        </div>
+        <h3>Colegio de Montalban</h3>
+        <p>Email: </p>
+        <p>Address: </p>
+        <p>Contact Person:</p>        
+      </div>
+      
+         
+    </div>
+     <div class="pagination">
+  <button onclick="prevPage()">Prev</button>
+  <span id="page-info"></span>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+</div>
+    
+      
+
+
+      
+    </div>
+   </div>
+</body>
+</html>
+
+
+<script>
+let currentPage = 1;
+const cardsPerPage = 3;
+const allCards = document.querySelectorAll('.card');
+let filteredCards = Array.from(allCards); // default = all cards
+let totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+
+function showPage(page) {
+  // hide all cards
+  allCards.forEach(card => card.style.display = 'none');
+
+  // calculate which filtered cards to show
+  const start = (page - 1) * cardsPerPage;
+  const end = start + cardsPerPage;
+
+  for (let i = start; i < end && i < filteredCards.length; i++) {
+    filteredCards[i].style.display = 'block';
+  }
+
+  // update page info
+  document.getElementById('page-info').textContent = 
+    `Page ${page} of ${totalPages || 1}`;
+}
+
+function nextPage() {
+  if (currentPage < totalPages) {
+    currentPage++;
+    showPage(currentPage);
+  }
+}
+
+function prevPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    showPage(currentPage);
+  }
+}
+
+function searchCards() {
+  const query = document.getElementById('search-input').value.toLowerCase().trim();
+
+  if (query === "") {
+    // Reset to default view (all cards)
+    filteredCards = Array.from(allCards);
+  } else {
+    // filter cards based on title or text
+    filteredCards = Array.from(allCards).filter(card => 
+      card.innerText.toLowerCase().includes(query)
+    );
+  }
+
+  // reset pagination
+  currentPage = 1;
+  totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+
+  showPage(currentPage);
+}
+document.getElementById('search-input').addEventListener('keydown', function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // prevent accidental form submission (if inside a form)
+    searchCards();
+  }
+  });
+</script>
+
