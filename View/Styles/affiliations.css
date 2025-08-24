@@ -90,6 +90,7 @@ h1 {
     
    max-width: 25%;
    height: auto;
+margin-top: -15px;
 
  position: relative;
  left: -40%;
@@ -99,7 +100,30 @@ h1 {
  color: #000000;
   
 }
+p{ 
+    font-size: 1rem;
+    text-align: left;
 
+    margin: 0 auto;
+
+
+}
+h3 {
+  padding: 0.3rem 0;
+  margin:  0 auto;
+}
+.learn-more {
+  margin-top: 1rem;
+  text-align: right;
+}
+.learn-more p {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .pagination {
   margin-top: 1rem;
@@ -127,7 +151,3 @@ h1 {
   background: #2952a3;
 }
 
-p{ 
-    font-size: 1rem;
-    text-align: left;
-}
