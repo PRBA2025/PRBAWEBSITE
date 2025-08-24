@@ -125,3 +125,13 @@ display: flex;
   cursor: pointer;
  
 }
+
+a {
+  text-decoration: none;
+  color: #fff
+}
+a:hover {
+  text-decoration: none;
+  color: #000000;
+  transition: ease-in-out 0.3s;
+}
