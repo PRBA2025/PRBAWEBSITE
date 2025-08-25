@@ -39,6 +39,23 @@ h1 {
   border: 1px solid #000000;
  
 }
+.outer-container {
+    width: 75%;
+    height: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-top: 50px;
+    
+     border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    background-color: rgba(255, 255 ,255, 0.85);
+    color: #000000;
+
+}
 
 
     /* Accordion */
@@ -109,21 +126,21 @@ display: flex;
   transition: transform 0.3s ease;
 }
 
-    .container {
-    width: 60%;
-    height: auto;
-    font-size: 1.5rem;
-    text-align: center;
-    justify-content: center;
-    margin: 0 auto;
-    font-weight: 600;
-    justify-content: center;;
-    margin: 0 auto;
-     border-radius: 0px 0px 10px 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-    padding: 1.5rem;
-    background-color: rgba(255, 255 ,255, 0.85);
-    color: #000000;
+.container {
+width: 60%;
+height: auto;
+font-size: 1.5rem;
+text-align: center;
+justify-content: center;
+margin: 0 auto;
+font-weight: 600;
+justify-content: center;;
+margin: 0 auto;
+  border-radius: 0px 0px 10px 10px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+padding: 1.5rem;
+background-color: rgba(255, 255 ,255, 0.2);
+color: #000000;
 
 }
 
@@ -159,15 +176,12 @@ a:hover {
     justify-content: center;
     margin: 0 auto;
     font-weight: 600;
-    margin-top: 100px;
+    
      border-radius: 10px 10px 0px 0px;
-    border: 1px solid #000000;
+
     padding: 1.5rem;
     background-color: rgba(0, 56, 168, 0.85);
-   
-
-
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .subheader a 
 {

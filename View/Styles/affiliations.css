@@ -8,7 +8,7 @@ body {
 h1 {
     font-weight: 900;
     text-align: center;
-    margin-top: 100px;
+ 
 }
 
 .image-container {
@@ -35,6 +35,10 @@ h1 {
       display: flex;
       gap: 0.5rem;
       margin-bottom: 0.5rem;
+      width: 25%;
+      justify-content: center;
+      margin: 0 auto;
+
     }
 
     .search-bar input {
@@ -62,7 +66,7 @@ h1 {
     justify-content: center;
     margin: 0 auto;
     font-weight: 600;
-
+    margin-top: 50px;
      border-radius: 0px 0px 10px 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     padding: 1.5rem;
@@ -86,9 +90,9 @@ h1 {
 
 .card {
 
-   border: 0.5px solid #000000;
+  
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
     background-color: rgba(255, 255 ,255, 0.85);
     color: #000000;
