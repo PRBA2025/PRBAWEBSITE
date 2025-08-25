@@ -14,12 +14,30 @@ h1 {
     margin-top: 50px;
     border-radius: 10px 10px 0px 0px;
    
-    background-color: rgba(217, 217, 217,0.85);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+
+ 
     color: #000000;
     z-index: 2;
     position: relative;
 }
+.outer-container {
+    width: 75%;
+    height: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-top: 50px;
+    
+     border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    background-color: rgba(255, 255 ,255, 0.75);
+    color: #000000;
+
+}
+
 
 
 .image-container {
