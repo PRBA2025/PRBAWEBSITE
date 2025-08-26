@@ -1,175 +1,46 @@
 @import url("root.css");
-:root {
-    --primary-color: #ff6600;
-    /* sporty orange */
-    --secondary-color: #0066ff;
-    /* energetic blue */
-    --background-color: #ffffff;
-    --text-color: #222;
-    --border-radius: 15px;
-}
-
-
-/* Section container */
-
 .rollball {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 8rem 8%;
-    min-height: 80vh;
+    padding: 6rem 8%;
+    min-height: 50vh;
     background: linear-gradient(135deg, #ffffff, #f0f4ff);
     flex-wrap: wrap;
     overflow: hidden;
 }
 
-
-/* Decorative basketball */
-
-.basketball {
-    position: absolute;
-    top: 50px;
-    right: 80px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #ff944d, #ff6600);
-    box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.2);
-    z-index: 0;
-    animation: bounce 6s infinite ease-in-out;
-}
-
-
-/* Black lines of basketball */
-
-.basketball::before,
-.basketball::after {
-    content: "";
-    position: absolute;
-    background: black;
-    border-radius: 50%;
-}
-
-.basketball::before {
-    width: 100%;
-    height: 4px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.basketball::after {
-    width: 4px;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-/* Extra diagonal lines */
-
-.basketball span {
-    position: absolute;
-    width: 4px;
-    height: 100%;
-    background: black;
-    border-radius: 50%;
-}
-
-.basketball span:first-child {
-    transform: rotate(45deg);
-    left: 50%;
-    top: 0;
-}
-
-.basketball span:last-child {
-    transform: rotate(-45deg);
-    left: 50%;
-    top: 0;
-}
-
-
-/* Bounce animation */
-
-@keyframes bounce {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-30px);
-    }
-}
-
-
-/* Left content */
-
-.rollball-content {
-    flex: 1 1 45%;
-    min-width: 280px;
-    position: relative;
-    z-index: 1;
-}
-
 .rollball-content h2 {
-    font-size: 6rem;
+    font-size: 7rem;
     color: var(--primary-color);
-    margin-bottom: 2rem;
-    line-height: 1.2;
+    margin-bottom: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
 }
 
 .rollball-content p {
-    font-size: 2.2rem;
+    font-size: 3rem;
     line-height: 1.6;
     color: var(--text-color);
-    max-width: 600px;
+    max-width: 700px;
+    margin-bottom: 2rem;
 }
 
 
-/* Right side - video */
-
-.rollball-image {
-    flex: 1 1 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 1;
-}
-
-.rollball-image iframe {
-    width: 32vw;
-    height: 20vw;
-    border-radius: 20px;
-    margin-left: 5rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.rollball-image iframe:hover {
-    transform: scale(1.05);
-}
-
-
-/* Sporty button (optional) */
+/* Button */
 
 .rollball-btn {
     background: var(--primary-color);
-    padding: 1rem 3rem;
+    padding: 1rem 2.5rem;
     color: #fff;
-    margin-top: 2rem;
     border-radius: var(--border-radius);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-    display: inline-block;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    margin-bottom: 13rem;
 }
 
 .rollball-btn:hover {
@@ -178,30 +49,80 @@
 }
 
 
-/* 🔹 Responsive adjustments */
+/* Right video */
+
+.rollball-video {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    /* center video horizontally */
+    align-items: center;
+    /* center video vertically */
+    z-index: 1;
+}
+
+.rollball-video iframe {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.rollball-video iframe:hover {
+    transform: scale(1.05);
+}
+
+
+/* 🔹 Basketball decorative element */
+
+.basketball {
+    position: absolute;
+    top: 10%;
+    right: -100px;
+    /* partly outside the container */
+    width: 400px;
+    height: 400px;
+    z-index: 0;
+    /* behind content */
+    pointer-events: none;
+    /* doesn’t block clicks */
+    opacity: 0.3;
+    /* subtle design */
+    background: url('../images/rollball.png') no-repeat center/contain;
+}
+
+
+/* Responsive */
 
 @media (max-width: 1024px) {
     .rollball {
         flex-direction: column;
-        text-align: center;
         padding: 5rem 5%;
     }
     .basketball {
-        width: 120px;
-        height: 120px;
-        top: 20px;
-        right: 20px;
+        width: 200px;
+        height: 200px;
+        top: 5%;
+        right: -50px;
     }
     .rollball-content h2 {
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
     .rollball-content p {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
-    .rollball-image iframe {
-        width: 90%;
-        height: 50vw;
-        margin-left: 0;
-        margin-top: 2rem;
+    .rollball-video iframe {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .rollball-content h2 {
+        font-size: 2.5rem;
+    }
+    .rollball-content p {
+        font-size: 1.3rem;
     }
 }
