@@ -10,7 +10,6 @@
     border-radius: var(--border-radius);
     box-shadow: 0 8px 20px rgba(0, 56, 168, 0.15);
     margin: 5rem auto;
-    margin-top: 1000px;
     max-width: 900px;
     text-align: center;
 }
