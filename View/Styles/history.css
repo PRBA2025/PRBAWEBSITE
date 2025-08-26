@@ -38,7 +38,9 @@ h1 {
 
 }
 
-
+#subheading {
+  font-weight: 800;
+}
 
 .image-container {
   position: fixed;
@@ -160,6 +162,8 @@ h1 {
   transform: translateX(0);
 }
 
-h3  {
-    text-align: justify;
+p {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
