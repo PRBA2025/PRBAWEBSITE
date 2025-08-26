@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+html, body {
+    font-family: 'Raleway', Arial, sans-serif;
+   margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+h1 {
+
+    text-align: justify;
+    font-weight: 800;
+    color: #fff;;
+    
+ 
+}
+
+.image-container {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+      linear-gradient(to bottom, rgba(217, 217, 217, 0.2), rgba(71, 74, 87, 0.5)),
+      url("/Images/prbalogo.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px solid #000000;
+
+ 
+}
+
+.img-container {
+    position: relative; /* not absolute anymore */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh; /* takes full viewport height */
+    width: 100%;
+    background: 
+        linear-gradient(to right, rgba(217, 217, 217, 0.2), rgba(71, 74, 87, 0.5)),
+        url("/Images/gallery/Coaching.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Style hr so it stays at bottom of img-container */
+.divider {
+    position: relative;;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #969BAB;
+    border: none;
+    margin: 0;
+}
+
+.bottom-container {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    background: #fff; /* or any color */
+    border: 1px solid #000000;
+}
+
+.container {
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    right: 100px;
+   text-align: justify;
+   align-items: center;
+ 
+ 
+   
+}
+ .learn-more {
+    height: 20%;
+    width: 40%;
+    border-radius: 10px;
+
+    
+    background-color: rgba(255, 255 ,255, 0.85);
+    color: #000000;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+      
+}
+.learn-more a {
+
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
+.learn-more:hover {
+    color: rgba(255, 255 ,255, 0.85);
+    background-color: rgba(56, 57, 58, 0.85);
+    transition: ease-in 0.25s;
+}
+
+.learn-more a:hover {
+     color: rgba(255, 255 ,255, 0.85);
+    background-color: rgba(56, 57, 58, 0.85);
+    transition: ease-in 0.25s;
+}
+
+.centers-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    border: 1px solid #000000;
+    margin: 0 auto;
+}
+
+#coaching {
+    text-align: center;
+    color: #000000;
+    font-weight: 900;
+    font-size: 3rem;
+
+}
+.card { 
+    width: 25%;
+    height: 50%;
+    border-radius: 10px;
+    background-color: rgba(255, 255 ,255, 0.85);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    
+}
+
+.card-image img{ 
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    align-content: center;
+
+    
+}
+.card-content {
+    border: 1px solid #000000;
+    margin: 0 auto;
+    text-align: left;
+    color: #000000;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.card-content p {
+    margin: 0 auto;
+}

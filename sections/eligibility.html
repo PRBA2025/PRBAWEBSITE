@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/eligibility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>PLAYER ELIGIBILITY CRITERIA</title>
+</head>
+
+<body>
+
+
+    <div class="image-container">
+
+    </div>
+
+    <div class="outer-container">
+        <h1>PLAYER ELIGIBILITY CRITERIA</h1>
+        <div class="subheader">
+            <a href="players_teams.html">BOYS</a>
+            <a href="players_teams.html">GIRLS</a>
+            <a href="players_teams.html">SCHOOL-WISE</a>
+            <a href="#">GET STARTED</a>
+
+        </div>
+        <div class="container">
+
+            <h3>Are you eligible to play?</h3>
+
+            <!-- Accordion -->
+            <div class="accordion">
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Registration Requirements </span>
+                        <i class="fas fa-chevron-up" id="toggle-icon"></i>
+
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="accordion-content">
+                        <div class="content-row">
+                            <p id="file-name">List of registration requirements</p>
+                        </div>
+                        <div class="content-row">
+                            <p id="file-name">List of registration requirements</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Do's and Don'ts as a Player </span>
+                        <i class="fas fa-chevron-up" id="toggle-icon"></i>
+
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="accordion-content">
+                        <div class="content-row">
+                            <p id="file-name">List of do's and don'ts</p>
+                        </div>
+                        <div class="content-row">
+                            <p id="file-name">List of do's and don'ts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Age Groups</span>
+                        <i class="fas fa-chevron-up" id="toggle-icon"></i>
+
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="accordion-content">
+                        <div class="content-row">
+                            <p id="file-name">List of Age Groups</p>
+                        </div>
+                        <div class="content-row">
+                            <p id="file-name">List of Age Groups</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Qualifying tests given by the Association </span>
+                        <i class="fas fa-chevron-up" id="toggle-icon"></i>
+
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="accordion-content">
+                        <div class="content-row">
+                            <p id="file-name">List of tests</p>
+                        </div>
+                        <div class="content-row">
+                            <p id="file-name">List of testsp>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    const items = document.querySelectorAll(".accordion-item");
+
+    items.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+        header.addEventListener("click", () => {
+            // close other items (optional: comment this out if you want multiple open)
+            items.forEach(i => {
+                if (i !== item) i.classList.remove("active");
+            });
+
+            // toggle clicked one
+            item.classList.toggle("active");
+        });
+    });
+</script>

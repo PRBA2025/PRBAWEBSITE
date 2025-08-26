@@ -1,0 +1,101 @@
+@import url("root.css");
+.officer {
+    text-align: center;
+    margin: 30px auto;
+    height: auto;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    position: relative;
+}
+
+.card {
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 0 70px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* --------- Lines --------- */
+
+
+/* Horizontal line connecting siblings */
+
+.org-level::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 169px;
+    right: 169px;
+    margin: auto;
+    height: 2px;
+    background: #222;
+}
+
+
+/* Vertical line above each card */
+
+.org-level .card::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background: #222;
+}
+
+
+/* --------- Exceptions --------- */
+
+
+/* 1. First row (President) – walang horizontal line at walang ::before sa card */
+
+.org-level.top::after,
+.org-level.top .card::before {
+    display: none;
+}
+
+
+/* 2. Line pababa galing kay President papunta sa horizontal line ng 2nd row */
+
+.org-level.top .card::after {
+    content: "";
+    position: absolute;
+    bottom: -700px;
+    /* adjust para tama ang haba */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 700px;
+    background: #222;
+}
+
+
+/* 3. Last row – walang tail pababa */
+
+.org-level.bottom::before {
+    display: none;
+}

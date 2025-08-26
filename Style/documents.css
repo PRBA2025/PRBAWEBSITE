@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+h1 {
+    display: flex;              
+    justify-content: center;    
+    align-items: center;       
+    
+    font-weight: 900;
+    width: 100%;
+    height: 10vh;
+    margin-top: 20px;
+    border-radius: 0px;
+
+    color: #000000;
+    z-index: 2;
+    position: relative;
+}
+.outer-container {
+    width: 75%;
+    height: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-top: 50px;
+    
+     border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    background-color: rgba(255, 255 ,255, 0.85);
+    color: #000000;
+
+}
+.image-container {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+      linear-gradient(to bottom, rgba(217, 217, 217, 0.2), rgba(71, 74, 87, 0.5)),
+      url("/Images/prbalogo.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px solid #000000;
+
+}
+.search-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 0.6rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .search-bar button {
+      padding: 0.6rem 1.2rem;
+      background: #f3f3f3;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .divider {
+      height: 2px;
+      background: #dedede; /* pink line */
+    
+    }
+
+    /* Accordion */
+   .accordion-item {
+  background: #3366cc;
+  color: #fff;
+  width: 1000px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.accordion-item:hover {
+  background: #2952a3;
+}
+
+/* Header (clickable area) */
+.accordion-header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Chevron icon */
+.accordion-item i {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when active */
+.accordion-item.active #toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Hidden content */
+.accordion-content {
+display: flex;
+  flex-direction: column; /* stack rows vertically */
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  background: #3366cc;
+  color: #fff;
+  border-radius: 0 0 12px 12px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.accordion-content .content-row {
+  display: flex;
+  justify-content: space-between; /* space between text and icon */
+  align-items: center; /* vertically align */
+  padding:  0; 
+
+}
+
+/* Show content when active */
+.accordion-item.active .accordion-content {
+  max-height: 200px; /* adjust based on content length */
+  padding: 1rem 1.5rem;
+}
+.accordion-item #download-icon {
+
+  transition: transform 0.3s ease;
+}
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+     
+    }
+
+.accordion-content p
+{
+
+  display: block;
+  margin-top: 1px;
+
+}
+#download-icon {
+  cursor: pointer;
+    margin-top: 1px;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+}
+a:hover {
+  text-decoration: none;
+  color: #000000;
+  transition: ease-in-out 0.3s;
+}

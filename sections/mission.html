@@ -1,75 +1,64 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Mission & Vision - Philippine Rollball Association</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="../images/prbalogo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Mission & Vision - Philippine Rollball Association</title>
+    <link rel="stylesheet" href="../Style/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../images/prbalogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
+
 <body>
 
-  <div id="header-container"></div>
+    <div id="header-container"></div>
 
-  <section class="mission-vision">
-  <h1>Mission & Vision</h1>
-  <div class="mv-container">
-    <div class="mission-box">
-      <h2>Mission</h2>
-      <p>
-        The mission of the Philippine Roll Ball Association (PRBA) is to
-promote and develop the sport of Roll Ball throughout the
-Philippines. Our aim is to provide a platform for athletes, coaches, and
-enthusiasts to engage in this dynamic and inclusive sport, fostering
-teamwork, athleticism, and fair play. We strive to create opportunities
-for all individuals to participate, compete, and excel in Roll Ball, while
-upholding the highest standards of sportsmanship and integrity
-through comprehensive training programs, robust grassroots
-initiatives, and strategic partnerships. We endeavor to raise
-awareness, enhance skills, and nurture a strong Roll Ball community
-in the Philippines.
-      </p>
-    </div>
-    <div class="vision-box">
-      <h2>Vision</h2>
-      <p>
-        The Philippine Roll Ball Association (PRBA) envisions a future where
-Roll Ball is widely embraced and celebrated throughout the
-Philippines as we aspire to create a vibrant and inclusive sporting
-culture where individuals of all ages, genders, and abilities have the
-opportunity to engage in the exhilarating world of Roll Ball.
-Together, we will build a legacy while fostering a sense of pride,
-unity, and to establish the Philippines as a recognized force in
-international Roll Ball competitions, bringing pride and honor to our
-nation.
-    </div>
-  </div>
-</section>
+    <section class="mission-vision">
+        <h1>Mission & Vision</h1>
+        <div class="mv-container">
+            <div class="mission-box">
+                <h2>Mission</h2>
+                <p>
+                    The mission of the Philippine Roll Ball Association (PRBA) is to promote and develop the sport of Roll Ball throughout the Philippines. Our aim is to provide a platform for athletes, coaches, and enthusiasts to engage in this dynamic and inclusive sport,
+                    fostering teamwork, athleticism, and fair play. We strive to create opportunities for all individuals to participate, compete, and excel in Roll Ball, while upholding the highest standards of sportsmanship and integrity through comprehensive
+                    training programs, robust grassroots initiatives, and strategic partnerships. We endeavor to raise awareness, enhance skills, and nurture a strong Roll Ball community in the Philippines.
+                </p>
+            </div>
+            <div class="vision-box">
+                <h2>Vision</h2>
+                <p>
+                    The Philippine Roll Ball Association (PRBA) envisions a future where Roll Ball is widely embraced and celebrated throughout the Philippines as we aspire to create a vibrant and inclusive sporting culture where individuals of all ages, genders, and abilities
+                    have the opportunity to engage in the exhilarating world of Roll Ball. Together, we will build a legacy while fostering a sense of pride, unity, and to establish the Philippines as a recognized force in international Roll Ball competitions,
+                    bringing pride and honor to our nation.
+            </div>
+        </div>
+    </section>
 
 
-  <div id="footer-container"></div>
+    <div id="footer-container"></div>
 
-  <script>
-    // Load header and footer dynamically like your main page
-    const parts = ["header", "footer"];
-    parts.forEach(part => {
-      fetch(`../sections/${part}.html`)
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById(`${part}-container`).innerHTML = html;
+    <script>
+        // Load header and footer dynamically like your main page
+        const parts = ["header", "footer"];
+        parts.forEach(part => {
+            fetch(`../sections/${part}.html`)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(`${part}-container`).innerHTML = html;
 
-          if (part === "header") {
-            if (typeof initNavbarScroll === "function") {
-              initNavbarScroll();
-            }
-          }
+                    if (part === "header") {
+                        if (typeof initNavbarScroll === "function") {
+                            initNavbarScroll();
+                        }
+                    }
+                });
         });
-    });
-  </script>
+    </script>
 
-  <script src="../javascript/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="../javascript/swiper.js"></script>
+    <script src="../javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="../javascript/swiper.js"></script>
 </body>
-</html> -->
+
+</html>

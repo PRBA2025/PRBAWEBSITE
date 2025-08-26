@@ -1,3 +1,6 @@
+@import url("root.css");
+@import url("Header.css");
+@import url("footer.css");
 .mission {
     display: flex;
     flex-direction: column;
@@ -123,7 +126,8 @@
     padding: 5rem 10%;
 }
 
-.officer {
+
+/* .officer {
     padding: 5rem 10%;
 }
 
@@ -131,9 +135,10 @@
     font-size: 5rem;
     text-align: center;
     padding-top: 5rem;
-}
+} */
 
-.org-level {
+
+/* .org-level {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -198,7 +203,7 @@
 .form-group {
     margin: 10px 0;
     font-size: 16px;
-}
+} */
 
 form input,
 form textarea {
