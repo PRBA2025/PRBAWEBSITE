@@ -99,10 +99,17 @@ a:hover {
     color: #000000;
 
 }
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    
+}
 #team-description {
     text-align: justify;
     padding: 2.5rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    text-indent: 5%;
 }
 p {
     margin-bottom: 1.5rem;
@@ -116,7 +123,7 @@ p {
     padding: 3rem;
 }
 .section {
-    width: 70%; /* adjust size */
+    width: 80%; /* adjust size */
     
     padding: 2rem;
     border-radius: 10px;
@@ -136,6 +143,10 @@ p {
 
     transition: background-color 0.3s ease;
 }
+.sections p, h4{ 
+    margin-top: 1rem;
+}
+
 
 
 .section img  {
