@@ -1,4 +1,4 @@
-/* .footer {
+.footer {
     background-color: var(--primary-color);
     color: var(--background-color);
     padding: 3rem 10%;
@@ -20,7 +20,7 @@
 footer {
     background-color: #001f3f;
     color: white;
-    padding: 3rem 2rem 1rem;
+    padding: 3rem 2rem 5rem;
     margin-top: 4rem;
 }
 
@@ -75,4 +75,4 @@ footer {
     border-top: 1px solid #444;
     margin-top: 2rem;
     font-size: 0.9rem;
-} */
+}
