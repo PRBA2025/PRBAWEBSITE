@@ -1,16 +1,3 @@
-.footer {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 3rem 10%;
-    text-align: center;
-    position: relative;
-}
-
-.footer p {
-    font-size: 1.6rem;
-    margin: 1rem 0;
-}
-
 .footer a {
     color: var(--background-color);
     text-decoration: none;
@@ -29,6 +16,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
+    margin-left: 30px;
 }
 
 .footer-container>div {
@@ -38,6 +26,10 @@ footer {
 .footer-logo img {
     width: 80px;
     margin-bottom: 1rem;
+}
+
+h3 {
+    margin-bottom: 10px;
 }
 
 .footer-logo h2 {

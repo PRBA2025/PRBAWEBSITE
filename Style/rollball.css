@@ -1,4 +1,4 @@
-@import url("root.css");
+@import url('root.css');
 .rollball {
     position: relative;
     display: flex;
@@ -9,6 +9,18 @@
     background: linear-gradient(135deg, #ffffff, #f0f4ff);
     flex-wrap: wrap;
     overflow: hidden;
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+/* Animate class when visible */
+
+.rollball.animate {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .rollball-content h2 {
@@ -55,16 +67,26 @@
     flex: 1 1 45%;
     display: flex;
     justify-content: center;
-    /* center video horizontally */
     align-items: center;
-    /* center video vertically */
     z-index: 1;
+    /* Animation same as content but from opposite direction */
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+/* Animate class for video */
+
+.rollball.animate .rollball-video {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .rollball-video iframe {
     width: 100%;
     max-width: 800px;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
@@ -75,21 +97,17 @@
 }
 
 
-/* 🔹 Basketball decorative element */
+/* Decorative basketball */
 
 .basketball {
     position: absolute;
     top: 10%;
     right: -100px;
-    /* partly outside the container */
     width: 400px;
     height: 400px;
     z-index: 0;
-    /* behind content */
     pointer-events: none;
-    /* doesn’t block clicks */
     opacity: 0.3;
-    /* subtle design */
     background: url('../images/rollball.png') no-repeat center/contain;
 }
 

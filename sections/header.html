@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+
+    <!-- Boxicons for hamburger icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Your stylesheet -->
     <link rel="stylesheet" href="../Style/Header.css">
-    <title>Document</title>
 </head>
 
 <body>
     <header class="header">
         <a href="/#" class="logo">
-            <img src="/images/prbalogo.png" alt="">
+            <img src="/images/prbalogo.png" alt="Logo">
         </a>
         <h1 class="navh1">
             <span class="line1">PHILIPPINE ROLLBALL</span>
             <span class="line2">ASSOCIATION INC.</span>
         </h1>
 
-        <!-- <i class="fa-solid fa-facebook"></i>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-youtube"></i> 0 -->
+        <i class='bx bx-menu' id="menu-icon"></i>
+
         <nav class="navbar">
             <a href="/#home">Home</a>
             <a href="/#rollball">RollBall</a>
@@ -35,12 +39,18 @@
             </div>
             <a href="/#news">News</a>
             <a href="../sections/documents.html">Documents</a>
+            <a class="btn" href="../sections/eligibility.html">Get Started</a>
         </nav>
-        <a class="btn" href="../sections/eligibility.html">Get Started</a>
-        <i class="bx bx-menu" id="menu-icon"></i>
     </header>
 
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const navbar = document.querySelector(".navbar");
 
+        menuIcon.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    </script>
 
 </body>
 

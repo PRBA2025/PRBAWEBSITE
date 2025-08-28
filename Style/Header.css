@@ -35,6 +35,7 @@
     font-size: 3.5rem;
     color: var(--main-color);
     display: none;
+    cursor: pointer;
 }
 
 .header.scrolled .navbtn {
@@ -47,28 +48,28 @@
     padding-left: 5px;
     margin-right: 15rem;
     line-height: 1.2;
-    /* control line spacing */
 }
 
 .navh1 .line1 {
     display: block;
-    /* forces new line */
     font-weight: 700;
 }
 
 .navh1 .line2 {
     display: block;
-    /* forces new line */
     font-weight: 400;
-    /* lighter if you want contrast */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
 }
 
 .navbar a {
     font-size: 15px;
     color: var(--text-color);
-    margin-left: 10rem;
-    font-weight: 700;
     margin: 3rem 1.5rem;
+    font-weight: 700;
     transition: 0.3s ease-in-out;
     border-bottom: 3px solid transparent;
     text-decoration: none;
@@ -80,7 +81,7 @@
 }
 
 
-/* Dropdown menu inside navbar */
+/* Dropdown menu */
 
 .dropdown-nav {
     position: relative;
@@ -115,9 +116,6 @@
     background-color: #f1f1f1;
 }
 
-
-/* Show dropdown on hover */
-
 .dropdown-nav:hover .dropdown-content-nav {
     display: block;
 }
@@ -136,4 +134,58 @@
 
 .navbar .navbtn:hover {
     transform: scale(1.2);
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 2rem 5%;
+    }
+    .header .logo img {
+        margin-left: 0;
+        width: 15vw;
+    }
+    .navh1 {
+        font-size: 15px;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        padding: 1rem 2rem;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar a,
+    .dropdown-nav {
+        margin: 1rem 0;
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    .dropdown-content-nav {
+        position: static;
+        box-shadow: none;
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+    .dropdown-content-nav a {
+        padding-left: 2rem;
+    }
+    .btn {
+        margin-left: 0;
+        margin-top: 1rem;
+        align-self: flex-start;
+    }
 }

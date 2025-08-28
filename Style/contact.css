@@ -1,0 +1,89 @@
+@import url("root.css");
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 10%;
+    background-color: #fff;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin: 10px 0;
+    font-size: 16px;
+    width: 100%;
+    /* always full width of container */
+    max-width: 900px;
+    /* large max width on desktop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1.6rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+    .contact {
+        padding: 4rem 8%;
+    }
+    .contact h2 {
+        font-size: 4.5rem;
+    }
+    .form-group {
+        font-size: 15px;
+        max-width: 700px;
+        /* smaller max width on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 3rem 6%;
+        gap: 15px;
+    }
+    .contact h2 {
+        font-size: 3.5rem;
+    }
+    .form-group {
+        font-size: 14px;
+        max-width: 500px;
+        /* smaller max width on phones */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 2rem 4%;
+        gap: 12px;
+    }
+    .contact h2 {
+        font-size: 2.8rem;
+    }
+    .form-group {
+        font-size: 13px;
+        max-width: 300px;
+        /* narrowest on small phones */
+    }
+}
