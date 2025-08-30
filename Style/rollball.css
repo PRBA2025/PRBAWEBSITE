@@ -1,146 +1,129 @@
-@import url('root.css');
-.rollball {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem 8%;
-    min-height: 50vh;
-    background: linear-gradient(135deg, #ffffff, #f0f4ff);
-    flex-wrap: wrap;
-    overflow: hidden;
-    /* Initial state for animation */
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-
-/* Animate class when visible */
-
-.rollball.animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.rollball-content h2 {
-    font-size: 7rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.rollball-content p {
-    font-size: 3rem;
-    line-height: 1.6;
-    color: var(--text-color);
-    max-width: 700px;
-    margin-bottom: 2rem;
-}
-
-
-/* Button */
-
-.rollball-btn {
-    background: var(--primary-color);
-    padding: 1rem 2.5rem;
-    color: #fff;
-    border-radius: var(--border-radius);
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-    display: inline-block;
-    margin-bottom: 13rem;
-}
-
-.rollball-btn:hover {
-    transform: translateY(-5px);
-    background: var(--secondary-color);
-}
-
-
-/* Right video */
-
-.rollball-video {
-    flex: 1 1 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    /* Animation same as content but from opposite direction */
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-
-/* Animate class for video */
-
-.rollball.animate .rollball-video {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.rollball-video iframe {
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.rollball-video iframe:hover {
-    transform: scale(1.05);
-}
-
-
-/* Decorative basketball */
-
-.basketball {
-    position: absolute;
-    top: 10%;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.3;
-    background: url('../images/rollball.png') no-repeat center/contain;
-}
-
-
-/* Responsive */
-
-@media (max-width: 1024px) {
+    @import url('root.css');
     .rollball {
-        flex-direction: column;
-        padding: 5rem 5%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6rem 8%;
+        min-height: 50vh;
+        background: linear-gradient(135deg, #ffffff, #f0f4ff);
+        flex-wrap: wrap;
+        overflow: hidden;
+        /* Initial state for animation */
     }
-    .basketball {
-        width: 200px;
-        height: 200px;
-        top: 5%;
-        right: -50px;
-    }
+    /* Animate class when visible */
+    
     .rollball-content h2 {
+        font-size: 5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    
+    .rollball-content p {
         font-size: 3rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        max-width: 700px;
+        margin-bottom: 2rem;
     }
-    .rollball-content p {
-        font-size: 1.5rem;
+    /* Button */
+    
+    .rollball-btn {
+        background: var(--primary-color);
+        padding: 1rem 2.5rem;
+        color: #fff;
+        border-radius: var(--border-radius);
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        display: inline-block;
+        margin-bottom: 13rem;
     }
+    
+    .rollball-btn:hover {
+        transform: translateY(-5px);
+        background: var(--secondary-color);
+    }
+    
+    .rollball-content {
+        flex: 1 1 50%;
+        /* text takes left half */
+    }
+    /* Right video */
+    
+    .rollball-video {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        /* Animation same as content but from opposite direction */
+    }
+    /* Animate class for video */
+    
+    .rollball.animate .rollball-video {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
     .rollball-video iframe {
-        max-width: 90%;
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
     }
-}
-
-@media (max-width: 768px) {
-    .rollball-content h2 {
-        font-size: 2.5rem;
+    
+    .rollball-video iframe:hover {
+        transform: scale(1.05);
     }
-    .rollball-content p {
-        font-size: 1.3rem;
+    /* Decorative basketball */
+    
+    .basketball {
+        position: absolute;
+        top: 10%;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.3;
+        background: url('../images/rollball.png') no-repeat center/contain;
     }
-}
+    /* Responsive */
+    
+    @media (max-width: 1024px) {
+        .rollball {
+            flex-direction: column;
+            padding: 5rem 5%;
+        }
+        .basketball {
+            width: 200px;
+            height: 200px;
+            top: 5%;
+            right: -50px;
+        }
+        .rollball-content h2 {
+            font-size: 3rem;
+        }
+        .rollball-content p {
+            font-size: 1.5rem;
+        }
+        .rollball-video iframe {
+            max-width: 90%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .rollball-content h2 {
+            font-size: 2.5rem;
+        }
+        .rollball-content p {
+            font-size: 1.3rem;
+        }
+    }

@@ -1,9 +1,9 @@
 function initHeroCarousel() {
     const images = [
-        "../images/gallery/images1.jpg",
-        "../images/gallery/images2.jpg",
-        "../images/gallery/images3.jpg",
-        "../images/gallery/images4.jpg"
+        "./images/gallery/images1.jpg",
+        "./images/gallery/images2.jpg",
+        "./images/gallery/images3.jpg",
+        "./images/gallery/images4.jpg"
     ];
 
     const carousel = document.querySelector('.carousel');
